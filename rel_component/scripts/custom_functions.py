@@ -11,7 +11,6 @@ from scripts.rel_pipe import make_relation_extractor
 # make the config work
 from scripts.rel_model import create_relation_model, create_classification_layer, create_instances, create_tensors
 
-
 @spacy.registry.readers("Gold_ents_Corpus.v1")
 def create_docbin_reader(file: Path) -> Callable[["Language"], Iterable[Example]]:
     return partial(read_files, file)
